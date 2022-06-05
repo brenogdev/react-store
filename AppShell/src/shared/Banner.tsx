@@ -1,112 +1,35 @@
 import React from "react";
 import { Box, Button } from "@mui/material";
 import { Carousel } from "react-responsive-carousel";
+import * as Styled from "./styles";
+import { banner } from "../constants/banner";
 
 export const Banner = () => {
   return (
     <Box>
-      <Carousel autoPlay showThumbs={false}>
-        <div>
-          <img
-            height="100%"
-            alt=""
-            src="https://images.pexels.com/photos/1488463/pexels-photo-1488463.jpeg"
-          />
-          <p className="legend">Legend 1</p>
-        </div>
-        <div>
-          <img
-            alt=""
-            src="http://lorempixel.com/output/cats-q-c-640-480-2.jpg"
-          />
-          <p className="legend">Legend 2</p>
-        </div>
-        <div>
-          <img
-            alt=""
-            src="http://lorempixel.com/output/cats-q-c-640-480-3.jpg"
-          />
-          <p className="legend">Legend 3</p>
-        </div>
-        <div>
-          <img
-            alt=""
-            src="http://lorempixel.com/output/cats-q-c-640-480-4.jpg"
-          />
-          <p className="legend">Legend 4</p>
-        </div>
-        <div>
-          <img
-            alt=""
-            src="http://lorempixel.com/output/cats-q-c-640-480-5.jpg"
-          />
-          <p className="legend">Legend 5</p>
-        </div>
-        <div>
-          <img
-            alt=""
-            src="http://lorempixel.com/output/cats-q-c-640-480-6.jpg"
-          />
-          <p className="legend">Legend 6</p>
-        </div>
-        <div>
-          <img
-            alt=""
-            src="http://lorempixel.com/output/cats-q-c-640-480-7.jpg"
-          />
-          <p className="legend">Legend 7</p>
-        </div>
-        <div>
-          <img
-            alt=""
-            src="http://lorempixel.com/output/cats-q-c-640-480-8.jpg"
-          />
-          <p className="legend">Legend 8</p>
-        </div>
-        <div>
-          <img
-            alt=""
-            src="http://lorempixel.com/output/cats-q-c-640-480-9.jpg"
-          />
-          <p className="legend">Legend 9</p>
-        </div>
-        <div>
-          <img
-            alt=""
-            src="http://lorempixel.com/output/cats-q-c-640-480-10.jpg"
-          />
-          <p className="legend">Legend 10</p>
-        </div>
-        <div>
-          <img
-            alt=""
-            src="http://lorempixel.com/output/cats-q-c-640-480-11.jpg"
-          />
-          <p className="legend">Legend 11</p>
-        </div>
-        <div>
-          <img
-            alt=""
-            src="http://lorempixel.com/output/cats-q-c-640-480-12.jpg"
-          />
-          <p className="legend">Legend 12</p>
-        </div>
-        <div>
-          <img
-            alt=""
-            src="http://lorempixel.com/output/cats-q-c-640-480-13.jpg"
-          />
-          <p className="legend">Legend 13</p>
-        </div>
-        <div>
-          <img
-            alt=""
-            src="http://lorempixel.com/output/cats-q-c-640-480-14.jpg"
-          />
-          <p className="legend">Legend 14</p>
-        </div>
+      <Carousel
+        autoPlay
+        showThumbs={false}
+        showStatus={false}
+        showArrows={false}
+      >
+        {banner.map((item) => (
+          <div key={item.id}>
+            <Styled.Image alt={item.alt} src={item.image} />
+            <p className="legend">{item.legend}</p>
+          </div>
+        ))}
       </Carousel>
-      <Button>Go to Shop</Button>
+      <Box sx={{
+        margin: 2,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
+      }}>
+        <Button variant="outlined" color="secondary">
+          Go to Shop
+        </Button>
+      </Box>
     </Box>
   );
 };
