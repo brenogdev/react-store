@@ -3,14 +3,12 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import PersonIcon from "@mui/icons-material/Person";
-import { Avatar, Container } from "@mui/material";
+import { Container } from "@mui/material";
 import { MenuNavigation } from "./MenuNavigation";
 
 export default function Header() {
@@ -35,8 +33,8 @@ export default function Header() {
                 <InstagramIcon />
               </IconButton>
             </Box>
-            <Box>
-              <Typography variant="h3" color="primary">
+            <Box textAlign="center">
+              <Typography variant="h3" color="secondary">
                 Store React
               </Typography>
             </Box>

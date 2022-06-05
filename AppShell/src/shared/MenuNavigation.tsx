@@ -15,7 +15,7 @@ export const MenuNavigation = () => {
         }}
       >
         <Box sx={{ margin: 5 }}>
-          <NavLink to="home">Home</NavLink>
+          <NavLink to="/">Home</NavLink>
         </Box>
         <Box sx={{ margin: 5 }}>
           <NavLink to="shop">Shop</NavLink>
