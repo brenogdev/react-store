@@ -1,5 +1,5 @@
 {
-  "name": "Login",
+  "name": "app-login",
   "version": "1.0.0",
   "scripts": {
     "build": "webpack --mode production",
@@ -21,6 +21,7 @@
     "@babel/preset-typescript": "^7.10.4",
     "@types/react": "^17.0.2",
     "@types/react-dom": "^17.0.2",
+    "@types/styled-components": "^5.1.25",
     "autoprefixer": "^10.1.0",
     "babel-loader": "^8.2.2",
     "css-loader": "^6.3.0",
@@ -34,7 +35,15 @@
     "webpack-dev-server": "^4.3.1"
   },
   "dependencies": {
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@hookform/resolvers": "^2.9.0",
+    "@mui/material": "^5.8.2",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-hook-form": "^7.31.3",
+    "react-router-dom": "6",
+    "styled-components": "^5.3.5",
+    "yup": "^0.32.11"
   }
 }

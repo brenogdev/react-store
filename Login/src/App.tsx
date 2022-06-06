@@ -1,14 +1,17 @@
+import { CssBaseline } from "@mui/material";
 import React from "react";
-import ReactDOM from "react-dom";
+import { Layout } from "./components/Layout";
+import { Login } from "./pages/Login";
 
-import "./index.css";
+const App = () => {
+  return (
+    <>
+      <CssBaseline />
+      <Layout>
+        <Login />
+      </Layout>
+    </>
+  );
+};
 
-const App = () => (
-  <div className="container">
-    <div>Name: Login</div>
-    <div>Framework: react</div>
-    <div>Language: TypeScript</div>
-    <div>CSS: Empty CSS</div>
-  </div>
-);
-ReactDOM.render(<App />, document.getElementById("app"));
+export { App };
