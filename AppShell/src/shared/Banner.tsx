@@ -11,7 +11,7 @@ export const Banner = () => {
         autoPlay
         showThumbs={false}
         showStatus={false}
-        showArrows={false}
+        showArrows
       >
         {banner.map((item) => (
           <div key={item.id}>
