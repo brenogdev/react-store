@@ -20,6 +20,9 @@ export const MenuNavigation = () => {
         <Box sx={{ margin: 5 }}>
           <NavLink to="shop">Shop</NavLink>
         </Box>
+        <Box sx={{ margin: 5 }}>
+          <NavLink to="login">Sign in</NavLink>
+        </Box>
       </Container>
     </Toolbar>
   );
